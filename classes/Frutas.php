@@ -6,11 +6,10 @@ class Frutas {
     private $nome;
     private $peso;
     
-    function __construct($cor, $nome, $peso="5kg") {
+    function __construct($cor, $nome) {
         $this->cor = $cor;
         $this->nome = $nome;
-        $this->peso = $peso;
-    }
+       }
     public function getCor(){
         return $this->cor;
     }
@@ -30,5 +29,8 @@ class Frutas {
         $this->peso = $peso;
     }
     
+    protected function into(){
+        echo "A fruta é {$this->nome} e a cor é {$this->cor}";
+    } 
 
 }
